@@ -1,3 +1,7 @@
+#personal additions
+*.err
+*.out
+
 # bioinfo files
 *.fastq
 *.fastq.gz
