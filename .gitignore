@@ -1,6 +1,7 @@
 #personal additions
 *.err
 *.out
+/fastqc_output
 
 # bioinfo files
 *.fastq
