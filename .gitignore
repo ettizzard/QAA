@@ -2,6 +2,8 @@
 *.err
 *.out
 /fastqc_output
+/STAR/
+/quality_trimmed_fastqs/
 
 # bioinfo files
 *.fastq
