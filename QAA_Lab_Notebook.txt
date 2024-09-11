@@ -247,15 +247,57 @@ Used scp to copy files to talapas. Decompressed both files for genome generation
 
     $ sbatch runstar_genomegen.sh
 
-16) After the genome was assembled, wrote and ran the 
+16) After the genome was assembled, wrote and ran the runstar_alignreads.sh script to align both library pairs to the mouse genome. After
+verifying the run was successful and the sam files were properly generated, copied and ran countmappedreads.py script from Bi621 PS8 on both
+library sam files. Added this data to report.
+
+    $ ./countmappedreads.py -i Mus_musculus.GRCm39.dna.ens112.STAR_2.7.11b_LibAAligned.out.sam
+        Number of mapped reads: 22657642
+        Number of unmapped reads: 793158
+
+    $ ./countmappedreads.py -i Mus_musculus.GRCm39.dna.ens112.STAR_2.7.11b_LibBAligned.out.sam
+        Number of mapped reads: 11078796
+        Number of unmapped reads: 226280
+
+
+17) Wrote and ran runhtseq-count.sh to count reads mapped to features - once with --stranded=yes and once with --stranded=reverse.
+
+    $ sbatch runhtseq-count.sh
+
+18) Manually made two separate count files from htseq-count output, as both are in one mess of an .out file. Used grep and awk to count feature
+mappings.
+
+    $ vim htseq_count_fwstranded.txt
+    $ vim htseq_count_rvstranded.txt
+
+    #Forward R1 Feature Map Count
+    $ grep -v "^_" htseq_count_fwstranded.txt | awk '{s+=$2} END {print s}'
+        411314
+    
+    #Forward R2 Feature Map Count
+    $ grep -v "^_" htseq_count_fwstranded.txt | awk '{s+=$3} END {print s}'
+        219590
+    
+    #All forward feature mappings: 630,904
+    411314 + 219590 = 630904
 
 
 
+    #Reverse R1 Feature Map Count
+    $ grep -v "^_" htseq_count_rvstranded.txt | awk '{s+=$2} END {print s}'
+        9700357
+
+    #Reverse R2 Feature Map Count
+    $ grep -v "^_" htseq_count_rvstranded.txt | awk '{s+=$3} END {print s}'
+        4805275
+
+    #All reverse feature mappings: 14,505,632
+    9700357 + 4805275 = 14505632
 
 
+    #Feature mapping comparison
+    14505632 / 630904 = 22.992
 
+    #The reverse count yielded essentially 23x more feature mappings than the forward count did. Interesting...
 
-
-
-
-
+19) Finished markdown file, exported and saved it, added all images and code to github.
