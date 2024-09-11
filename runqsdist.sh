@@ -19,4 +19,4 @@ set -e
 
 /usr/bin/time -v /home/tizzard/bgmp/bioinfo/Bi622/Demultiplex/Assignment-the-first/perbaseqsdistributions.py -f /projects/bgmp/shared/2017_sequencing/demultiplexed/2_2B_control_S2_L008_R1_001.fastq.gz -l 101 -r 1
 
-/usr/bin/time -v /home/tizzard/bgmp/bioinfo/Bi622/Demultiplex/Assignment-the-first/perbaseqsdistributions.py -f /projects/bgmp/shared/2017_sequencing/demultiplexed/2_2B_control_S2_L008_R2_001.fastq.gz -l 101 -r 1
+/usr/bin/time -v /home/tizzard/bgmp/bioinfo/Bi622/Demultiplex/Assignment-the-first/perbaseqsdistributions.py -f /projects/bgmp/shared/2017_sequencing/demultiplexed/2_2B_control_S2_L008_R2_001.fastq.gz -l 101 -r 2
