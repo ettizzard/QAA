@@ -23,7 +23,7 @@ set -e
  /projects/bgmp/tizzard/bioinfo/Bi623/QAA/quality_trimmed_fastqs/qual_trimmed_28_4D_mbnl_S20_L008_R1_001_paired.fastq.gz \
  /projects/bgmp/tizzard/bioinfo/Bi623/QAA/quality_trimmed_fastqs/qual_trimmed_28_4D_mbnl_S20_L008_R2_001_paired.fastq.gz \
  --genomeDir /projects/bgmp/tizzard/bioinfo/Bi623/QAA/STAR/Mus_musculus.GRCm39.dna.ens112.STAR_2.7.11b \
- --outFileNamePrefix Danio_rerio.GRCz11.dna.ens112.STAR_2.7.11b_LibA
+ --outFileNamePrefix Mus_musculus.GRCm39.dna.ens112.STAR_2.7.11b_LibA
 
 
 #Library B
@@ -36,4 +36,4 @@ set -e
  /projects/bgmp/tizzard/bioinfo/Bi623/QAA/quality_trimmed_fastqs/qual_trimmed_2_2B_control_S2_L008_R1_001_paired.fastq.gz \
  /projects/bgmp/tizzard/bioinfo/Bi623/QAA/quality_trimmed_fastqs/qual_trimmed_2_2B_control_S2_L008_R2_001_paired.fastq.gz \
  --genomeDir /projects/bgmp/tizzard/bioinfo/Bi623/QAA/STAR/Mus_musculus.GRCm39.dna.ens112.STAR_2.7.11b \
- --outFileNamePrefix Danio_rerio.GRCz11.dna.ens112.STAR_2.7.11b_LibB
+ --outFileNamePrefix Mus_musculus.GRCm39.dna.ens112.STAR_2.7.11b_LibB
